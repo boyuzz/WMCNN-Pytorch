@@ -1,0 +1,6 @@
+torch>=0.4.1
+h5py==2.7.1
+numpy>=1.13.0
+scikit-learn>=0.19.1
+tqdm>=4.24.0
+tensorboardX==1.4

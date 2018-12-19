@@ -1,0 +1,66 @@
+{
+  "exp_name": "wmcnn",
+  "seed": 47,
+  "distributed": false,
+  "train_data_loader": {
+    "data_path": "D:/data/rsscn7/",
+    "train_path": "full_wdata.h5",
+    "test_path": "Samples/",
+    "threads": 0,
+    "batch_size": 32,
+    "is_gray": true,
+    "is_rotate": true,
+    "is_fliplr": true,
+    "is_fliptb": true,
+    "random_scale": true
+  },
+  "test_data_loader": {
+    "data_path": "D:/data/rsscn7/",
+    "test_path": "Samples/",
+    "upscale": 2
+  },
+  "trainer": {
+    "net": "wmcnn",
+    "bot": false,
+    "cuda": true,
+    "log_freq": 50,
+    "num_epochs": 10000,
+    "save_freq": 50,
+    "max_gradual_scale": 2,
+    "progressive": false,
+    "upscale": 2,
+    "color": false,
+    "resume": false,
+    "checkpoint": "weights.epoch_836_mean_val_psnr_32.097.hdf5",
+    "optimizer": {
+      "type": "Adam",
+      "bias_lr": 1e-4,
+      "w_output_lr": 1e-4,
+      "w_inter_lr": 1e-3,
+      "optimizer_param": {
+        "lr": 1e-3,
+        "weight_decay": 1e-4,
+        "betas": [0.95, 0.999]
+      },
+      "lr_scheduler": false,
+      "lr_scheduler_param": {
+        "mode": "min",
+        "patience": 20,
+        "factor": 0.5,
+        "threshold": 1e-4,
+        "min_lr": 1e-7
+      }
+    },
+    "loss": {
+      "type": "Euclidean",
+      "size_average": false,
+      "batch_average": true
+    }
+  },
+  "model": {
+    "in_channels": 1,
+    "num_filter": 64,
+    "upscale": 2,
+    "res_scale":1
+  }
+}
