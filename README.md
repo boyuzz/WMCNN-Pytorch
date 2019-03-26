@@ -3,7 +3,7 @@ The Pytorch reproduction of WMCNN [Aerial Image Super Resolution via Wavelet Mul
 If you use this code, please cite the paper.
 
 ****
-The PSNR value on RSSCNN7 dataset is compared in the following table.
+The PSNR value on RSSCN7 dataset is compared in the following table.
 
 |Methods|Upscaling factor|Grass|Field|Industry|River Lake|Forest|Resident|Parking|Average|
 |---|---|---|---|---|---|---|---|---|---|
