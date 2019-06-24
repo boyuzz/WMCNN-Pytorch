@@ -15,6 +15,8 @@ The PSNR value on RSSCN7 dataset is compared in the following table.
 # Usage
 
 ## Generate data
+First, you need to download the RSSCN7 dataset in [this site](https://www.dropbox.com/s/j80iv1a0mvhonsa/RSSCN7.zip?dl=0&file_subpath=%2FRSSCN7) and put it in the directory "data/rsscn7". Then you can either use the following two methods to generate the hdf5 dataset. (*Note: using other datasets is also possible.)
+
 ### Matlab
 Use the code "generate_train.m" provided in folder 'matlab_generate_data' to generate hdf5 dataset.
 
